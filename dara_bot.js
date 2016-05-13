@@ -69,7 +69,7 @@ This bot demonstrates many of the core features of Botkit:
 
 var greetings = ['hello', 'hi', 'hey'];
 
-var currentState = {
+var users = {
         'user_id1' : {
             'category' : '',
             'destination':'',
