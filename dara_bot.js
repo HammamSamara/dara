@@ -79,6 +79,7 @@ var currentState = {
 
         }
 }
+var showCategories = require('./showCategories.js');
 
 if (!process.env.page_token) {
     console.log('Error: Specify page_token in environment');
@@ -128,91 +129,62 @@ controller.hears(['hello', 'hi', 'hey'], 'message_received', function(bot, messa
     controller.storage.users.get(message.user, function(err, user) {
         if (user && user.name) {
             bot.reply(message, 'Hello ' + user.name + '!!');
-        } else {
-            bot.reply(message, 'Hey, I can plan your trip, what kind of vacation?');
-            showCategories();
         }
-    });
-});
-
-
-controller.hears(['structured'], 'message_received', function(bot, message) {
-
-    bot.reply(message, {
-        attachment: {
-            'type': 'template',
-            'payload': {
-                'template_type': 'generic',
-                'elements': [
-                    {
-                        'title': 'Classic White T-Shirt',
-                        'image_url': 'http://petersapparel.parseapp.com/img/item100-thumb.png',
-                        'subtitle': 'Soft white cotton t-shirt is back in style',
-                        'buttons': [
-                            {
-                                'type': 'web_url',
-                                'url': 'https://petersapparel.parseapp.com/view_item?item_id=100',
-                                'title': 'View Item'
-                            },
-                            {
-                                'type': 'web_url',
-                                'url': 'https://petersapparel.parseapp.com/buy_item?item_id=100',
-                                'title': 'Buy Item'
-                            },
-                            {
-                                'type': 'postback',
-                                'title': 'Bookmark Item',
-                                'payload': 'White T-Shirt'
-                            }
-                        ]
-                    },
-                    {
-                        'title': 'Classic Grey T-Shirt',
-                        'image_url': 'http://petersapparel.parseapp.com/img/item101-thumb.png',
-                        'subtitle': 'Soft gray cotton t-shirt is back in style',
-                        'buttons': [
-                            {
-                                'type': 'web_url',
-                                'url': 'https://petersapparel.parseapp.com/view_item?item_id=101',
-                                'title': 'View Item'
-                            },
-                            {
-                                'type': 'web_url',
-                                'url': 'https://petersapparel.parseapp.com/buy_item?item_id=101',
-                                'title': 'Buy Item'
-                            },
-                            {
-                                'type': 'postback',
-                                'title': 'Bookmark Item',
-                                'payload': 'Grey T-Shirt'
-                            }
-                        ]
-                    }
-                ]
+        bot.reply(message, 'Hey, I can plan your trip, what kind of vacation?');
+        bot.reply(message, {
+          attachment: {
+            "type":"template",
+            "payload":{
+              "template_type":"button",
+              "text":"Please select a category?",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Moon",
+                  "payload":"moon"
+                },
+                {
+                  "type":"postback",
+                  "title":"x",
+                  "payload":"x"
+                },
+                {
+                  "type":"postback",
+                  "title":"y",
+                  "payload":"y"
+                }
+              ]
             }
         }
+        });
     });
 });
 
 controller.on('facebook_postback', function(bot, message) {
-
+    //console.log('Great Choice!!!! (' + message.payload + ')');
+    console.log("2222");
     bot.reply(message, 'Great Choice!!!! (' + message.payload + ')');
     handleCategoriesSelection(message);
 
 });
 
 
-function askDestination() {
 
-bot.startConversation(message, function(err, convo) {
-                if (!err) {
-                    convo.ask('Where do youb like to go??', function(response, convo) {
-                        // save city
-                        askDates(convo);
-                    }
-                }
+function handleCategoriesSelection(message) {
+  currentState[message.user].category = message.payload;
 }
 
+var askDestination = function(bot) {
+
+  // bot.startConversation(message, function(err, convo) {
+  //                 if (!err) {
+  //                     convo.ask('Where do youb like to go??', function(response, convo) {
+  //                         // save city
+  //                         askDates(convo);
+  //                     });
+  //                 }
+  // }
+}
 
 function askDates(convo) {
 
@@ -344,15 +316,15 @@ controller.hears(['uptime', 'identify yourself', 'who are you', 'what is your na
 
 
 
-controller.on('message_received', function(bot, message) {
-    bot.reply(message, 'Try: `what is my name` or `structured` or `call me captain`');
-    return false;
-});
+// controller.on('message_received', function(bot, message) {
+//     bot.reply(message, 'Try: `what is my name` or `structured` or `call me captain`');
+//     return false;
+// });
 
-controller.on('message_delivered', function(bot,message) {
-    console.log(message);
-    return false;
-});
+// controller.on('message_delivered', function(bot,message) {
+//     console.log(message);
+//     return false;
+// });
 
 
 function formatUptime(uptime) {
