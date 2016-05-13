@@ -69,6 +69,17 @@ This bot demonstrates many of the core features of Botkit:
 
 var greetings = ['hello', 'hi', 'hey'];
 
+var currentState = {
+        'user_id1' : {
+            'category' : '',
+            'destination':'',
+            'dates':''
+        },
+        'user_id2' : {
+
+        }
+}
+
 if (!process.env.page_token) {
     console.log('Error: Specify page_token in environment');
     process.exit(1);
@@ -98,15 +109,28 @@ controller.setupWebserver(process.env.port || 3000, function(err, webserver) {
     });
 });
 
+function identifyUser(userId) {
 
-controller.hears(greetings, 'message_received', function(bot, message) {
+    if (!currentState[userId]) {
+        currentState[userId] = {};
+    }
 
+}
+
+
+controller.hears(['hello', 'hi', 'hey'], 'message_received', function(bot, message) {
+
+    console.log(message);
+    console.log(message.user);
+
+    identifyUser(message.user);
 
     controller.storage.users.get(message.user, function(err, user) {
         if (user && user.name) {
             bot.reply(message, 'Hello ' + user.name + '!!');
         } else {
-            bot.reply(message, 'Hello.');
+            bot.reply(message, 'Hey, I can plan your trip, what kind of vacation?');
+            showCategories();
         }
     });
 });
@@ -173,8 +197,29 @@ controller.hears(['structured'], 'message_received', function(bot, message) {
 controller.on('facebook_postback', function(bot, message) {
 
     bot.reply(message, 'Great Choice!!!! (' + message.payload + ')');
+    handleCategoriesSelection(message);
 
 });
+
+
+function askDestination() {
+
+bot.startConversation(message, function(err, convo) {
+                if (!err) {
+                    convo.ask('Where do youb like to go??', function(response, convo) {
+                        // save city
+                        askDates(convo);
+                    }
+                }
+}
+
+
+function askDates(convo) {
+
+    // get the dates
+    // show matching packages
+    //
+}
 
 controller.hears(['call me (.*)', 'my name is (.*)'], 'message_received', function(bot, message) {
     var name = message.match[1];
