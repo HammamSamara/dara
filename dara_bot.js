@@ -110,13 +110,13 @@ controller.setupWebserver(process.env.port || 3000, function(err, webserver) {
     });
 });
 
-function identifyUser(userId) {
-
-    if (!currentState[userId]) {
-        currentState[userId] = {};
-    }
-
-}
+// function identifyUser(userId) {
+//
+//     if (!currentState[userId]) {
+//         currentState[userId] = {};
+//     }
+//
+// }
 
 
 controller.hears(['hello', 'hi', 'hey'], 'message_received', function(bot, message) {
@@ -124,7 +124,7 @@ controller.hears(['hello', 'hi', 'hey'], 'message_received', function(bot, messa
     console.log(message);
     console.log(message.user);
 
-    identifyUser(message.user);
+    // identifyUser(message.user);
 
     controller.storage.users.get(message.user, function(err, user) {
         if (user && user.name) {
@@ -171,7 +171,7 @@ controller.on('facebook_postback', function(bot, message) {
 
 
 function handleCategoriesSelection(message) {
-  currentState[message.user].category = message.payload;
+  //currentState[message.user].category = message.payload;
 }
 
 var askDestination = function(bot) {
