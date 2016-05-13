@@ -304,6 +304,11 @@ controller.on('message_received', function(bot, message) {
     return false;
 });
 
+controller.on('message_delivered', function(bot,message) {
+    console.log(message);
+    return false;
+});
+
 
 function formatUptime(uptime) {
     var unit = 'second';
