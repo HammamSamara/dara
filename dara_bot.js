@@ -67,6 +67,7 @@ This bot demonstrates many of the core features of Botkit:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+var greetings = ['hello', 'hi', 'hey'];
 
 if (!process.env.page_token) {
     console.log('Error: Specify page_token in environment');
@@ -98,7 +99,7 @@ controller.setupWebserver(process.env.port || 3000, function(err, webserver) {
 });
 
 
-controller.hears(['hello', 'hi'], 'message_received', function(bot, message) {
+controller.hears(greetings, 'message_received', function(bot, message) {
 
 
     controller.storage.users.get(message.user, function(err, user) {
