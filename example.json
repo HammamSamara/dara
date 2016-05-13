@@ -1,0 +1,171 @@
+{
+    "title": "6 nights Trabzon and uzungöl",
+    "subtitle": "Tourism program in uzungöl and Trabzon area, which includes accommodation at selected hotels , 3 - star in Trabzon distinctive cottages hotel in uzungöl",
+    "city": "Trabzon",
+    "country": "Turkey",
+    "cover_image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Uzung%C3%B6l_lake_and_town.jpg",
+    "images": ["http://www.trabzondayim.com/wp-content/uploads/2014/09/56.jpg", "http://www.tour4arabs.com/Storage/tour/uzungol%20lake%20trabzon%201.jpg", "http://www.trabzontours.com/img/trabzon/Uzungol-3.jpg"],
+    "locale": "en",
+    "endorsements": ["Family", "Friends", "Luxury", "Religious", "Honey moon"],
+    "details": "<p>First day: After your arrival to Trabzon airport you will find our representative waiting for you to welcome you and take you to the hotel private car to be received room and then you take a break and you can take Askchaveh tour around the hotel.</p><p>Second day: after breakfast in the hotel and in promptly at nine in the morning a driver waiting for you to be on the hotel door to start your tour to go to the monastery Alsomala with an elevation of 1300 meters above sea level , surrounded by mountains , resp monastery dates from the monastery to 400 AD When you're not heading to the mountains Kizana where is the very beauty and creativity Divine these mountains that give way to the south of Turkey and then you going to the village of Hamsi it is one of the most important breaks Kizana mountains , where Tlqon in this village beauty of nature, climate , and because there are types of flowers and herbs makes the pasture where the rich and various kinds will finally Tzrn Karaja a cave where you see inside the cave exhibition of art and creativity Lord stalagmites and stalactites, stone, stalactites , where you will see innovation in the creation of God , who astonish and dazzle the eyes.</p>",
+    "policies": ["The price includes breakfast in Trabzon Hotel.", "Price does not include breakfast in the hotel uzungöl.", "Price does not include fuel in Trabzon and uzungöl.", "Price does not include international air tickets and domestic airline tickets.", "Price does not include lunch and dinner.", "Price does not include Albarkinj and entrance fees to tourist areas estimated with something simple."],
+    "rate": 750,
+    "promotion_rate": 650,
+    "checkin_date": "1465776000",
+    "nights": 10,
+    "expiration_date": "1465776000",
+    "adults": 2,
+    "availability": 8,
+    "_geoloc": {
+        "lat": 31.122963,
+        "lng": 33.813076
+    },
+    "slug": "turkey/trabzon/6-nights-trabzon-and-uzungol",
+    "objectID": "469273971",
+    "_highlightResult": {
+        "city": {
+            "value": "Trabzon",
+            "matchLevel": "none",
+            "matchedWords": []
+        },
+        "country": {
+            "value": "Turkey",
+            "matchLevel": "none",
+            "matchedWords": []
+        },
+        "endorsements": [{
+            "value": "Family",
+            "matchLevel": "none",
+            "matchedWords": []
+        }, {
+            "value": "Friends",
+            "matchLevel": "none",
+            "matchedWords": []
+        }, {
+            "value": "Luxury",
+            "matchLevel": "none",
+            "matchedWords": []
+        }, {
+            "value": "Religious",
+            "matchLevel": "none",
+            "matchedWords": []
+        }, {
+            "value": "Honey moon",
+            "matchLevel": "none",
+            "matchedWords": []
+        }],
+        "slug": {
+            "value": "turkey/trabzon/6-nights-trabzon-and-uzungol",
+            "matchLevel": "none",
+            "matchedWords": []
+        }
+    },
+    "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 1,
+        "geoDistance": 0,
+        "geoPrecision": 1,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 2
+    }
+}, {
+    "title": "5 nights Istanbul and Marmara Sea",
+    "subtitle": "Enchanting tourism program, which includes 4 - star Hotel accommodation with breakfast and a tour of the most popular tourist and natural sightseeing, markets, and cruise yacht and dinner, in addition to the conveyance to and from the airport",
+    "city": "Istanbul",
+    "country": "Turkey",
+    "cover_image": "https://i.ytimg.com/vi/7A1q7v4btbk/maxresdefault.jpg",
+    "images": ["https://oic2016istanbulsummit.org/wp-content/uploads/2016/03/istanbul.jpg", "http://cache-graphicslib.viator.com/graphicslib/thumbs674x446/3795/SITours/istanbul-by-night-turkish-dinner-and-show-in-istanbul-119876.jpg", "http://queenofistanbul.com/wp-content/uploads/2016/01/Istanbul-Pano.jpg"],
+    "locale": "en",
+    "endorsements": ["Friends", "Religious", "Honey moon"],
+    "details": "<p>FAfter your arrival to Ataturk Airport delegates are waiting to welcome you and take you to the hotel you will find a private car to the receipt of the rooms and then you take a break and you can take a tour of discovery around the hotel.</p><p>after breakfast at nine o'clock in the morning I go with you driver of a private car to visit the Sultan Ahmed Mosque and then the Hagia Sophia Museum , where he is next to the mosque and then are going to Topkapi Palace, or the higher the door, and then to visit the famous smell fragrant Egyptian market where the beautiful spices and so we have finished our tour and get back to the hotel at around five o'clock in the evening.</p>",
+    "policies": ["The price includes breakfast.", "Price does not include international air tickets.", "Price does not include lunch and dinner.", "Price does not include Albarkinj and entrance fees to tourist areas estimated with something simple"],
+    "rate": 690,
+    "promotion_rate": 630,
+    "checkin_date": "1468368000",
+    "nights": 10,
+    "expiration_date": "1468540800",
+    "adults": 2,
+    "availability": 5,
+    "slug": "turkey/istanbul/5-nights-istanbul-and-marmara-sea",
+    "_geoloc": {
+        "lat": 31.122963,
+        "lng": 33.813076
+    },
+    "objectID": "469274301",
+    "_highlightResult": {
+        "city": {
+            "value": "Istanbul",
+            "matchLevel": "none",
+            "matchedWords": []
+        },
+        "country": {
+            "value": "Turkey",
+            "matchLevel": "none",
+            "matchedWords": []
+        },
+        "endorsements": [{
+            "value": "Friends",
+            "matchLevel": "none",
+            "matchedWords": []
+        }, {
+            "value": "Religious",
+            "matchLevel": "none",
+            "matchedWords": []
+        }, {
+            "value": "Honey moon",
+            "matchLevel": "none",
+            "matchedWords": []
+        }],
+        "slug": {
+            "value": "turkey/istanbul/5-nights-istanbul-and-marmara-sea",
+            "matchLevel": "none",
+            "matchedWords": []
+        }
+    },
+    "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 0,
+        "geoDistance": 0,
+        "geoPrecision": 1,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 2
+    }
+}],
+"nbHits": 2,
+"page": 0,
+"nbPages": 1,
+"hitsPerPage": 10,
+"processingTimeMS": 1,
+"facets": {
+    "city": {
+        "Istanbul": 1,
+        "Trabzon": 1
+    },
+    "locale": {
+        "en": 2
+    },
+    "endorsements": {
+        "Friends": 2,
+        "Honey moon": 2,
+        "Religious": 2,
+        "Family": 1,
+        "Luxury": 1
+    }
+},
+"exhaustiveFacetsCount": true,
+"query": "",
+"params": "query=&getRankingInfo=1&facets=*&attributesToRetrieve=*&highlightPreTag=%3Cem%3E&highlightPostTag=%3C%2Fem%3E&hitsPerPage=10&facetFilters=%5B%22endorsements%3AHoney%20moon%22%2C%22endorsements%3AReligious%22%5D&maxValuesPerFacet=100",
+"serverUsed": "c4-fr-1.algolia.net",
+"parsedQuery": "",
+"timeoutCounts": false,
+"timeoutHits": false,
+"facets_stats": {
+
+}
+}
