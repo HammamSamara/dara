@@ -126,10 +126,10 @@ controller.hears(['hello', 'hi', 'hey'], 'message_received', function(bot, messa
 
     // identifyUser(message.user);
 
-    // controller.storage.users.get(message.user, function(err, user) {
-    //     if (user && user.name) {
-    //         bot.reply(message, 'Hello ' + user.name + '!!');
-    //     }
+    controller.storage.users.get(message.user, function(err, user) {
+        if (user && user.name) {
+            bot.reply(message, 'Hello ' + user.name + '!!');
+        }
         bot.reply(message, 'Hey, I can plan your trip, what kind of vacation?');
         bot.reply(message, {
           attachment: {
@@ -140,39 +140,32 @@ controller.hears(['hello', 'hi', 'hey'], 'message_received', function(bot, messa
               "buttons":[
                 {
                   "type":"postback",
-                  "title":"Moon",
-                  "payload":"moon"
+                  "title":"Honey Moon",
+                  "payload":"HoneyMoon"
                 },
                 {
                   "type":"postback",
-                  "title":"x",
-                  "payload":"x"
+                  "title":"العشره الاواخر",
+                  "payload":"last10"
                 },
                 {
                   "type":"postback",
-                  "title":"y",
-                  "payload":"y"
+                  "title":"رمضان",
+                  "payload":"Ramadan"
                 }
               ]
             }
         }
         });
-    // });
-});
-
-controller.on('facebook_postback', function(bot, message) {
-    console.log('Great Choice!!!! (' + message.payload + ')');
-    console.log("2222");
-    bot.reply(message, 'Great Choice!!!! (' + message.payload + ')');
-    // handleCategoriesSelection(message);
-
+    });
 });
 
 
 
-// function handleCategoriesSelection(message) {
-//   //currentState[message.user].category = message.payload;
-// }
+
+function handleCategoriesSelection(message) {
+  users[message.user].category = message.payload;
+}
 //
 // var askDestination = function(bot) {
 //
@@ -275,41 +268,3 @@ controller.on('facebook_postback', function(bot, message) {
 //     });
 // });
 //
-// controller.hears(['shutdown'], 'message_received', function(bot, message) {
-//
-//     bot.startConversation(message, function(err, convo) {
-//
-//         convo.ask('Are you sure you want me to shutdown?', [
-//             {
-//                 pattern: bot.utterances.yes,
-//                 callback: function(response, convo) {
-//                     convo.say('Bye!');
-//                     convo.next();
-//                     setTimeout(function() {
-//                         process.exit();
-//                     }, 3000);
-//                 }
-//             },
-//         {
-//             pattern: bot.utterances.no,
-//             default: true,
-//             callback: function(response, convo) {
-//                 convo.say('*Phew!*');
-//                 convo.next();
-//             }
-//         }
-//         ]);
-//     });
-// });
-
-
-// controller.hears(['uptime', 'identify yourself', 'who are you', 'what is your name'], 'message_received',
-//     function(bot, message) {
-//
-//         var hostname = os.hostname();
-//         var uptime = formatUptime(process.uptime());
-//
-//         bot.reply(message,
-//             ':robot_face: I am a bot named <@' + bot.identity.name +
-//              '>. I have been running for ' + uptime + ' on ' + hostname + '.');
-//     });
